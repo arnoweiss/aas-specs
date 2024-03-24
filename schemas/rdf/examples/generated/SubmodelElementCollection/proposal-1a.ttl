@@ -1,0 +1,23 @@
+@prefix aas: <https://admin-shell.io/aas/3/0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix my: <https://example.org/path/> .
+
+my:ExampleSubmodel rdf:type aas:Submodel ;
+  <https://admin-shell.io/aas/3/0/Identifiable/id> "something_48c66017"^^xs:string ;
+  <https://admin-shell.io/aas/3/0/Submodel/submodelElements> <https://example.org/base/path/ExampleSubmodel/Smc> .
+
+<https://example.org/path/ExampleSubmodel/ExampleSmc> rdf:type aas:SubmodelElementCollection ;
+  <https://admin-shell.io/aas/3/0/Referable/idShort> "ExampleSmc"^^xs:string ;
+  <https://admin-shell.io/aas/3/0/HasSemantics/semanticId> <urn:something00:f4547d0c> ;
+  <https://admin-shell.io/aas/3/0/SubmodelElementCollection/value> <https://example.org/path/ExampleSubmodel#ExampleSmc.ExampleMlp> . 
+
+<https://example.org/path/ExampleSubmodel#ExampleSmc.ExampleMlp> rdf:type aas:MultiLanguageProperty ;
+  <https://admin-shell.io/aas/3/0/Referable/idShort> "ExampleMlp"^^xs:string ;
+  <https://admin-shell.io/aas/3/0/MultiLanguageProperty/value> [
+            rdf:type aas:LangStringTextType ;
+            <https://admin-shell.io/aas/3/0/AbstractLangString/language> "de-CH"^^xs:string ;
+            <https://admin-shell.io/aas/3/0/AbstractLangString/text> "something_cd7e6587"^^xs:string ;
+    ] .
